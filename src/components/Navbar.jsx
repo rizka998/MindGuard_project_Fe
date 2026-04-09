@@ -60,7 +60,7 @@ export default function Navbar({ setOpen }) {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setOpen((prev) => !prev)}
-            className="lg:hidden text-white text-2xl"
+            className="block md:hidden text-white text-2xl"
           >
             ≡
           </button>
@@ -83,7 +83,7 @@ export default function Navbar({ setOpen }) {
       </div>
 
       {/* CENTER MENU */}
-      <div className="hidden md:flex items-center gap-10 text-white font-semibold text-sm">
+      <div className="hidden lg:flex items-center gap-10 text-white font-semibold text-sm">
         <button
           onClick={handleHistoryClick}
           className="flex items-center gap-2 hover:opacity-80"

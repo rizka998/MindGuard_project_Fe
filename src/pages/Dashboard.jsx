@@ -1,4 +1,6 @@
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import DailyCheckIn from "../components/DailyCheckIn";
 import SummaryCard from "../components/SummaryCard";
 import FeatureCard from "../components/FeatureCard";
@@ -7,9 +9,13 @@ import StatusCard from "../components/StatusCard";
 import MyCustomIcon from "../assets/icon-mindguard.png";
 
 export default function Dashboard() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-100">
-      <Navbar />
+      <Navbar setOpen={setOpen}/>
+
+      <Sidebar isOpen={open} setOpen={setOpen}/>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         {/* Banner Selamat Datang */}
